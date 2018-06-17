@@ -26,8 +26,12 @@ $(function () {
             // also remove the normal message attribute
             d.attr( "data-loaded-message", "" );
             d.removeAttr( "data-message" );
+            // don't show the element at first
+            d.css( "display", "none" );
             // append to container
             d.appendTo( "[data-message-container]" );
+            // fade in animation for element
+            d.fadeIn( 200 );
 
             // destroy the original element
             c.remove();
@@ -35,8 +39,11 @@ $(function () {
             // set a timeout to destroy the element after a given time
             var b = setTimeout(function () {
 
-                // destroy the element
-                d.remove();
+                // let the element fade out
+                d.fadeOut( 1000, function () {
+                    // remove after animation
+                    d.remove();
+                });
 
             }, destroyTime);
 
