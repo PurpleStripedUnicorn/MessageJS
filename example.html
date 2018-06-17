@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- default title -->
+    <title>MessageJS example</title>
+
+    <!-- always include jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- include message-js, javascript and css -->
+    <script src="message-js.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="message-js.css" />
+
+    <script>
+
+    function addMessage () {
+        var message = $( "#main_input" ).val();
+        $( "#main_input" ).val("");
+        $( "body" ).append( "<div data-message>" + message + "</div>" );
+    }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- introduction text -->
+    <p>
+        Hi, this a test
+    </p>
+
+    <!-- button to show message -->
+    <form action="javascript:addMessage()">
+        <input type="text" id="main_input" />
+        <input type="submit" />
+    </form>
+
+</body>
+</html>

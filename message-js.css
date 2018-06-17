@@ -1,0 +1,26 @@
+/* user input messages, these aren't displayed */
+[data-message] {
+    display: none !important;
+}
+
+/* messages inside the container */
+[data-loaded-message] {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #eee;
+    color: #333;
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 10px 13px;
+    margin-top: 5px;
+}
+
+/* message container */
+[data-message-container] {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 0;
+    min-width: 200px;
+    width: 20vw;
+}
